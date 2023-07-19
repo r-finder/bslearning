@@ -6,11 +6,11 @@ mixin tableHead(data)
 mixin tableRow(data)
   tr 
     each d in data 
-      td.dataTable_cell 
+      td
         div.dataTable_cell--innerDiv=d
 
 mixin dataTable(data)
-    table 
+    table.dataTable
         +tableHead(data.headers)
         tbody
             each row in data.rows
