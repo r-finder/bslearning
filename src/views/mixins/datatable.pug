@@ -1,0 +1,17 @@
+mixin tableHead(data)
+  thead 
+    each d in data 
+      th=d 
+
+mixin tableRow(data)
+  tr 
+    each d in data 
+      td.dataTable_cell 
+        div.dataTable_cell--innerDiv=d
+
+mixin dataTable(data)
+    table 
+        +tableHead(data.headers)
+        tbody
+            each row in data.rows
+                +tableRow(row) 

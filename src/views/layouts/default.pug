@@ -1,0 +1,34 @@
+
+block init
+block variables
+block settings
+
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes')
+
+    block head
+
+  body(data-locale=lang class=bodyClass)
+
+    .header-container
+      .header-content
+        a(href="index.html").header-left
+          img(src=require("@images/logo-app.png")).app-logo
+        block headline
+        .header-right
+
+    main.main-container
+      .main-content.block-content
+        block content
+
+    .ui-templates(style='display: none;')
+      block template
+
+
+    block callback
+    block script

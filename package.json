@@ -1,0 +1,39 @@
+{
+  "name": "data-table",
+  "version": "0.0.1",
+  "description": "Tech demonstration of the Data Table component",
+  "repository": {},
+  "private": true,
+  "license": "ISC",
+  "keywords": [],
+  "autor": "biodiscus@gmail.com",
+  "scripts": {
+    "start": "webpack serve --mode=development",
+    "watch": "webpack watch --mode=development --progress",
+    "build": "webpack --mode=production --progress",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=16.15"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "prismjs": "^1.29.0",
+    "tether": "^2.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "@faker-js/faker": "8.0.2",
+    "jsdom": "^22.1.0",
+    "prettier": "^3.0.0",
+    "pug-plugin": "^4.9.8",
+    "sass": "1.63.6",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  }
+}
