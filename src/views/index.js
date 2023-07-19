@@ -14,15 +14,22 @@ class App {
         const bs = new Bullshit();
 
         let result = {
-          headers: ['x1', 'x1', 'x1', 'x1', 'x1', 'x1', 'x1', 'x1', 'x1'],
+          headers: ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10'],
           rows: []
         };
 
-        for (let i=0; i<10; i++) {
-          let row = [];
-          for (let j=0; j<10; j++) {
-            row.push(bs.generateName());
-          }
+        for (let i=0; i<1000; i++) {
+          let row = bs.generateDataRow([
+            {type:'int', min:0, max:1000},
+            {type:'date', daysBack: 1000},
+            {type:'bool'},
+            {type:'name', gender: 'male'},
+            {type:'name', gender: 'female'},
+            {type:'date', daysBack: 100},
+            {type:'name'},
+            {type:'xxx'},
+            {type:'xxx'},
+            {type:'xxx'} ])
           result.rows.push(row);
         }
 
