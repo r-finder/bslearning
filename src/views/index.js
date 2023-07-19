@@ -21,7 +21,7 @@ class App {
         for (let i=0; i<10; i++) {
           let row = [];
           for (let j=0; j<10; j++) {
-            row.push(bs.generateJapaneseWord(6));
+            row.push(bs.generateName());
           }
           result.rows.push(row);
         }
