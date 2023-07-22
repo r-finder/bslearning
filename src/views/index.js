@@ -1,5 +1,8 @@
-require('./dataPage.js');
-require('./bullshit.js');
+//require('./dataPage.js');
+
+import ViewPage from './ViewPage';
+
+import Bullshit from './bullshit';
 
 class App {
     static init() {
@@ -7,7 +10,7 @@ class App {
     }
 
     static run() {
-        
+
     }
 
     static getData = () => {
@@ -18,7 +21,7 @@ class App {
           rows: []
         };
 
-        for (let i=0; i<1000; i++) {
+        for (let i=0; i<100; i++) {
           let row = bs.generateDataRow([
             {type:'int', min:0, max:1000},
             {type:'date', daysBack: 1000},
@@ -38,10 +41,11 @@ class App {
 
     static updatePage = () => {
       const data = App.getData();
-      window.DataPage.render(data);
+      ViewPage.render(data); //TODO
     }
 }
 
 App.init();
 App.run();
+
 window.App = App;

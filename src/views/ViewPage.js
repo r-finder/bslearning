@@ -1,10 +1,12 @@
-const tmpl = require('./dataPage.pug');
+// const tmpl = require('./dataPage.pug');
+import tmpl from './dataPage.pug';
 
-class DataPage {
+
+class ViewPage {
   static render = (data) => {
     const dtElement = document.querySelector('.dataTable');
     dtElement.innerHTML = tmpl({data: data});
   }
 }
 
-window.DataPage = DataPage;
+export default ViewPage;
