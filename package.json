@@ -8,8 +8,7 @@
   "keywords": [],
   "autor": "",
   "type": "module",
-  "main": "app.js",
-  "scripts": {
+    "scripts": {
     "start": "./run_dev.sh", 
     "watch": "webpack watch --mode=development --progress",
     "build": "webpack --mode=production --progress",
@@ -22,13 +21,10 @@
     "packages/*"
   ],
   "dependencies": {
-      "prismjs": "^1.29.0",
-      "tether": "^2.0.0",
       "express": "^4.18.2"
     },
   "devDependencies": {
     "css-loader": "^6.8.1",
-    "@faker-js/faker": "8.0.2",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.0",
     "pug-plugin": "^4.9.8",

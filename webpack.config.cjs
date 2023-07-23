@@ -36,7 +36,7 @@ const web = (env, argv) => {
         '@images': path.join(__dirname, 'app/client/assets/images/'),
         '@fonts': path.join(__dirname, 'app/client/assets/fonts/'),
         '@scripts': path.join(__dirname, 'app/client/assets/js/'),
-        '@styles': path.join(__dirname, 'app/client/assets/sass/'),
+        '@styles': path.join(__dirname, 'app/client/assets/styles/'),
         '@views': path.join(__dirname, 'app/client/views/'),
       },
     },
