@@ -85,7 +85,7 @@ const web = (env, argv) => {
 
         {
           test: /\.(png|jpg|jpeg|svg|ico)$/,
-          type: 'asset/resource', //built in in Webpack
+          type: 'asset/resource', //built in Webpack
           include: /\/images/,
           generator: {
             filename: 'assets/img/[name].[hash:8][ext][query]',
