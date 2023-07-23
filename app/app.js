@@ -3,7 +3,7 @@ import express from 'express';
 import * as path from 'node:path';
 import * as url from 'node:url';
 
-import Bullshit from '../src/views/bullshit.js';
+import Bullshit from './client/views/bullshit.js';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -11,11 +11,11 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const app = express();
 const port = 3000;
 
-app.use(express.static('../dist'));
+app.use(express.static('./dist'));
 
 app.get('/', (req, res) => {
   //res.send('Hello xxx World!');
-  const tmplFile = '../dist/index.html';
+  const tmplFile = './dist/index.html';
   const tmplPath = path.join(__dirname, tmplFile);
 
   res.sendFile(tmplPath);

@@ -1,4 +1,4 @@
-const path = require('path'); //node library
+const path = require('path'); 
 const PugPlugin = require('pug-plugin');
 
 const PATHS = {
@@ -33,17 +33,17 @@ const web = (env, argv) => {
         '@components': PATHS.components,
 
         // aliases
-        '@images': path.join(__dirname, 'src/assets/images/'),
-        '@fonts': path.join(__dirname, 'src/assets/fonts/'),
-        '@scripts': path.join(__dirname, 'src/assets/js/'),
-        '@styles': path.join(__dirname, 'src/assets/sass/'),
-        '@views': path.join(__dirname, 'src/views/'),
+        '@images': path.join(__dirname, 'client/assets/images/'),
+        '@fonts': path.join(__dirname, 'client/assets/fonts/'),
+        '@scripts': path.join(__dirname, 'client/assets/js/'),
+        '@styles': path.join(__dirname, 'client/assets/sass/'),
+        '@views': path.join(__dirname, 'client/views/'),
       },
     },
 
     //entry: require('./webpack.entries'),
     entry: {
-      index: './src/views/index.pug',
+      index: './client/views/index.pug',
     },
 
     plugins: [
@@ -103,28 +103,28 @@ const web = (env, argv) => {
       ],
     },
 
-    devServer: {
-      static: {
-        directory: PATHS.output,
-      },
-      compress: true,
-      // open: {
-      //   app: {
-      //     name: 'google-chrome',
-      //   },
-      // },
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-        "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-      },
-      watchFiles: {
-        paths: ['src/**/*.*'],
-        options: {
-          usePolling: true,
-        },
-      },
-    },
+    // devServer: {
+    //   static: {
+    //     directory: PATHS.output,
+    //   },
+    //   compress: true,
+    //   // open: {
+    //   //   app: {
+    //   //     name: 'google-chrome',
+    //   //   },
+    //   // },
+    //   headers: {
+    //     "Access-Control-Allow-Origin": "*",
+    //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+    //     "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    //   },
+    //   watchFiles: {
+    //     paths: ['src/**/*.*'],
+    //     options: {
+    //       usePolling: true,
+    //     },
+    //   },
+    // },
 
     performance: {
       hints: false, // disable warning by usage faker.js lib with size > 10MB
