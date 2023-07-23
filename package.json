@@ -10,7 +10,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "webpack serve --mode=development",
+    "start": "./run_dev.sh", 
     "watch": "webpack watch --mode=development --progress",
     "build": "webpack --mode=production --progress",
     "test": "jest"

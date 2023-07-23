@@ -2,8 +2,8 @@ const path = require('path');
 const PugPlugin = require('pug-plugin');
 
 const PATHS = {
-  output: path.join(__dirname, 'dist/'),
-  components: path.join(__dirname, 'src/lib/WebUI/components/'),
+  output: path.join(__dirname, './dist/'),
+  //components: path.join(__dirname, 'src/lib/WebUI/components/'),
 };
 
 const web = (env, argv) => {
@@ -30,20 +30,20 @@ const web = (env, argv) => {
 
     resolve: {
       alias: {
-        '@components': PATHS.components,
+        //'@components': PATHS.components,
 
         // aliases
-        '@images': path.join(__dirname, 'client/assets/images/'),
-        '@fonts': path.join(__dirname, 'client/assets/fonts/'),
-        '@scripts': path.join(__dirname, 'client/assets/js/'),
-        '@styles': path.join(__dirname, 'client/assets/sass/'),
-        '@views': path.join(__dirname, 'client/views/'),
+        '@images': path.join(__dirname, 'app/client/assets/images/'),
+        '@fonts': path.join(__dirname, 'app/client/assets/fonts/'),
+        '@scripts': path.join(__dirname, 'app/client/assets/js/'),
+        '@styles': path.join(__dirname, 'app/client/assets/sass/'),
+        '@views': path.join(__dirname, 'app/client/views/'),
       },
     },
 
     //entry: require('./webpack.entries'),
     entry: {
-      index: './client/views/index.pug',
+      index: './app/client/views/index.pug',
     },
 
     plugins: [
@@ -102,29 +102,6 @@ const web = (env, argv) => {
         },
       ],
     },
-
-    // devServer: {
-    //   static: {
-    //     directory: PATHS.output,
-    //   },
-    //   compress: true,
-    //   // open: {
-    //   //   app: {
-    //   //     name: 'google-chrome',
-    //   //   },
-    //   // },
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*",
-    //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-    //     "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-    //   },
-    //   watchFiles: {
-    //     paths: ['src/**/*.*'],
-    //     options: {
-    //       usePolling: true,
-    //     },
-    //   },
-    // },
 
     performance: {
       hints: false, // disable warning by usage faker.js lib with size > 10MB

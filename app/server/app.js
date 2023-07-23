@@ -3,7 +3,7 @@ import express from 'express';
 import * as path from 'node:path';
 import * as url from 'node:url';
 
-import Bullshit from './client/views/bullshit.js';
+import Bullshit from '../common/bullshit.js';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
