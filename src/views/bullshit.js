@@ -3,7 +3,7 @@
 // ESModule Class
 // import {Random} from './random';
 // ESModule: import single functions as namespace
-import * as random from './random';
+import * as random from './random.js';
 
 class Bullshit {
     japaneseSyllables = ['wa','wo','wu','we','wi','ka','ko','ku','ke','ki','ma','mo','mu','me','mi','ra','ro','ru','re','ri','da', 'di', 'do','du','de','a', 'o', 'u', 'i', 'e','ta','to','tu','te','ti','ga','go','gu','ge','gi','sa','so','su','se','si'];

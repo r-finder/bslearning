@@ -1,5 +1,4 @@
 const path = require('path'); //node library
-
 const PugPlugin = require('pug-plugin');
 
 const PATHS = {
@@ -26,6 +25,7 @@ const web = (env, argv) => {
 
     output: {
       path: PATHS.output,
+      publicPath: '/',
     },
 
     resolve: {
@@ -113,6 +113,11 @@ const web = (env, argv) => {
       //     name: 'google-chrome',
       //   },
       // },
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+      },
       watchFiles: {
         paths: ['src/**/*.*'],
         options: {

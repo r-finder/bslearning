@@ -6,7 +6,8 @@
   "private": true,
   "license": "ISC",
   "keywords": [],
-  "autor": "biodiscus@gmail.com",
+  "autor": "",
+  "type": "module",
   "scripts": {
     "start": "webpack serve --mode=development",
     "watch": "webpack watch --mode=development --progress",
