@@ -15,26 +15,7 @@ class Bullshit {
       this.options = options;
     }
 
-    async fetchData(url) {
-        try {
-          const response = await fetch(url, {
-            method: 'GET',
-            mode: 'no-cors',
-        });
-          if (!response.ok) {
-            console.log(response);
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        } catch (error) {
-          console.error('Unable to fetch data:', error);
-        }
-    }
-
     generateName(gender) {
-        // if (this.surnames.length === 0) {
-        //     this.fetchData('https://www.randomlists.com/data/names-surnames.json').then(console.log);
-        // }
         let result = '';
         if (gender === 'male') {
           result += random.getItem(this.maleNames);

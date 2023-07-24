@@ -1,23 +1,3 @@
-// class Random {
-//     static getInt(max) {
-//         return this.getArbitraryInt(0, max);
-//     }
-//
-//     static getArbitraryInt(min, max) {
-//         min = Math.ceil(min);
-//         max = Math.floor(max);
-//         return Math.floor(Math.random() * (max - min + 1) + min);
-//     }
-//
-//     static getBoolean() {
-//         return Math.random() > 0.5;
-//     }
-//
-//     static getItem(array) {
-//         const max = array.length - 1;
-//         return array[this.getInt(max)];
-//     }
-// }
 
 export const getInt = (max) => {
   return getArbitraryInt(0, max);
